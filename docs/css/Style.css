@@ -5,6 +5,7 @@
 html {
     overflow-x: hidden;
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -32,4 +33,25 @@ html {
     padding: 20px;
     text-align: center;
     color: #fff;
+}
+
+.projectkaart {
+    margin: 1px;
+    padding: 0px;
+    transition: all 0.5s;
+}
+
+.projectkaart:hover {
+    translate: 0px -5px;
+    transition: all 0.2s;
+}
+
+.kaartlink {
+    text-decoration: none;
+}
+
+.kaartImage {
+    width: 100%;
+    border: rgba(0, 0, 0, 0.132) 1px solid;
+    border-radius: 5px;
 }
