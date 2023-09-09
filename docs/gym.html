@@ -43,14 +43,15 @@
     <div class="justify-content-center row mt-5">
         <div class="wrap col-8">
             <div class="accordion" id="accordionExample">
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button text-center" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Day #1 | Push
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="text-center">
@@ -203,6 +204,15 @@
             </div>
         </div>
     </div>
+    <!-- Overlay for password input -->
+    <div id="overlay" class="overlay">
+        <div class="password-container">
+            <h1>Login</h1>
+            <input type="password" id="password" placeholder="Enter password" required>
+            <button id="login-button">Submit</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
