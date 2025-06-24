@@ -1,30 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const overlay = document.getElementById("overlay");
-    const mainContent = document.getElementById("main-content");
-    const passwordInput = document.getElementById("password");
-    const loginButton = document.getElementById("login-button");
 
-    // Password to access the website
-    const correctPassword = "gym";
+document.addEventListener('DOMContentLoaded', initialize);
 
-    // Show the overlay
-    overlay.style.visibility = "visible";
-    overlay.style.opacity = 1;
+function initialize() {
+    const age = document.querySelector("#age");
+    const birthDate = new Date(2005, 4, 22); // Months are 0-indexed: 4 = May
+    const today = new Date();
+    let ageValue = today.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthday =
+        today.getMonth() > birthDate.getMonth() ||
+        (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+    if (!hasHadBirthday) {
+        ageValue--;
+    }
+    age.innerHTML = ageValue;
 
-    // Handle login button click
-    loginButton.addEventListener("click", function () {
-        const enteredPassword = passwordInput.value;
-
-        if (enteredPassword === correctPassword) {
-            // Correct password, hide the overlay
-            overlay.style.visibility = "hidden";
-            overlay.style.opacity = 0;
-        } else {
-            // Incorrect password, display a message
-            alert("Incorrect password. Please try again.");
-            passwordInput.value = "";
-        }
-    });
-});
-
-
+}
