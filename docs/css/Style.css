@@ -30,7 +30,7 @@ html {
 .kaartImage {
     width: 450px;
     height: 250px;
-    object-fit: cover;
+    object-fit: fill;
     border: 1px solid, rgba(0, 0, 0, 0.123);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
