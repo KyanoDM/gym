@@ -2,6 +2,10 @@
 document.addEventListener('DOMContentLoaded', initialize);
 
 function initialize() {
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
     // Calculate and display age
     const age = document.querySelector("#age");
     if (age) {
